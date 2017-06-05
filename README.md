@@ -333,28 +333,28 @@ THEOREM1.对于任意的m，如果有多于3m个将军及最多m个叛徒，则�
 
 先看全图 (在目录 full/pic 下可找到)。 
 忠诚将军发令图   
-![](images/n7t2/c_is_loyal_full.svg)
+![忠诚将军发令图](./images/n7t2/c_is_loyal_full.svg)
 非忠诚将军发令图   
-![](images/n7t2/c_is_traitor_full.svg)
+![非忠诚将军发令图 ](./images/n7t2/c_is_traitor_full.svg)
 嗯，这么大的图， 谁看谁懵逼....但不看是没有直观感受的。
 
 可以分阶段来看， 就选忠诚将军的那个情况来看吧(在目录 stage/pic 下可找到)。
 
 OM(2)阶段
-![](images/n7t2/stage0_m2.svg)
+![OM(2)阶段](./images/n7t2/stage0_m2.svg)
 
 
 OM(1)阶段
-![](images/n7t2/stage1_m1.svg)
+![OM(1)阶段](./images/n7t2/stage1_m1.svg)
 
 OM(0)阶段
-![](images/n7t2/stage2_m0.svg)
+![OM(0)阶段](./images/n7t2/stage2_m0.svg)
 
 
 在分布式的环境下，单个节点只需要通过自己接收的命令消息，即可做出推断，所以集中焦点在某个节点推演其做决策的过程，即可得知算法的细节。
 
 先来看看单个节点的收到消息的图示，红色部分表示其他节点给某一个节点发消息时，该节点的位置。 以L1 为例。
-![](images/n7t2/L1_received_location.svg)
+![单个节点的收到消息图](./images/n7t2/L1_received_location.svg)
 
 相对应的，L1 收到的所有消息列表如下(在目录 individual/txt下可找到相关的文件):
 <pre><code>
@@ -397,10 +397,10 @@ L5 said: L6 said: C said: ?r
 
 
 最后看所有参与者的决策过程，也就是每一个参与者算majority的过程
-![](images/n7t2/stage_majority_2_m0.svg)
+![算majority的过程](./images/n7t2/stage_majority_2_m0.svg)
 
 聚焦到L1的身上，效果如下：
-![](images/n7t2/stage_majority_L1_2_m0.svg)
+![L1算majority的过程](./images/n7t2/stage_majority_L1_2_m0.svg)
 
 这两张图的看法， 
 第一行标识 在那一轮的算法中， 我们采用的例子是 7个将军其中有2个叛徒，也即从OM(2)开始，但是OM(2)只是 发令者发令，故可以省略。
@@ -424,7 +424,7 @@ L1将命令a 转发， 我们只关注收到的信息不关注发出的信息。
 
 在OM(0)阶段，
 针对 L2的命令， (L3,L4,L5,L6)皆有反馈，再一次的，我们看到第三行里面的 第一个元素，就是OM(1)阶段，L2直接给 L1 发送的消息，其余元素的值，都是OM(0)阶段 其他元素发给L1的值。 假如不够直观，可以参照图 
-![](images/n7t2/L1_received_location.svg))
+![单个节点的收到消息图](./images/n7t2/L1_received_location.svg))
 可以发现，第三行 其实就是 以 L2 为根结点的那棵树中所有到L1的值。(L2的位置 C->L2)。
   
 在OM(0)阶段的  已经到达边界了,可以对majority进行求解，calc values 这时候是跟 received value 一致的， 所有可以求得majority的具体值。
