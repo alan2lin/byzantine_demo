@@ -211,10 +211,10 @@
 从叛徒m=3 总数3m+1=10 开始讨论。
 在刚开始，第一个法令者有两种情况，忠诚将军或者是叛徒。
 先看看发令者是叛徒的情况。
-![](images/manual/bzt_abs_m4_ct.svg)
+![发令者是叛徒](./images/manual/bzt_abs_m4_ct.svg)
 
 再看看发令者是忠诚者的情况。
-![](images/manual/bzt_abs_m4_cl.svg)
+![发令者是忠诚者](./images/manual/bzt_abs_m4_cl.svg)
 
 可以很明显的看出来， 在递归过程中， 假如发令者是忠诚下属的话，会很明显地出现叛徒数目与规模不一致的情况。
 
@@ -333,7 +333,7 @@ THEOREM1.对于任意的m，如果有多于3m个将军及最多m个叛徒，则�
 
 先看全图 (在目录 full/pic 下可找到)。 
 忠诚将军发令图   
-![忠诚将军发令图](./images/n7t2/c_is_loyal_full.svg)
+![忠诚将军发令图](https://cdn.rawgit.com/alan2lin/byzantine_demo/9a83b576/images/n7t2/c_is_loyal_full.svg)
 非忠诚将军发令图   
 ![非忠诚将军发令图 ](./images/n7t2/c_is_traitor_full.svg)
 嗯，这么大的图， 谁看谁懵逼....但不看是没有直观感受的。
